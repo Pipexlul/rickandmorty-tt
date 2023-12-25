@@ -4,6 +4,7 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
+  "extends": ["prettier"],
   "overrides": [
     {
       "files": ["*.ts"],
