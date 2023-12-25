@@ -7,4 +7,6 @@ import { Component } from "@angular/core";
   templateUrl: "./app-header.component.html",
   styleUrl: "./app-header.component.css",
 })
-export class AppHeaderComponent {}
+export class AppHeaderComponent {
+  isBurgerOpen: boolean = false;
+}
