@@ -1,0 +1,31 @@
+<div
+  class="p-4 shadow-md rounded-md"
+  [class]="statusColor"
+  [class.text-black]="isAlive"
+>
+  <h2 class="text-xl font-bold mb-2 text-inherit">
+    {{ cardData.name | capitalize }}
+  </h2>
+  <img
+    src="https://via.placeholder.com/100"
+    alt="Card 1 Image"
+    class="w-full mb-2"
+  />
+  <div class="flex justify-between items-center">
+    <dl>
+      <div class="flex">
+        <dt class="font-bold mr-2">Gender:</dt>
+        <dd>{{ cardData.gender }}</dd>
+      </div>
+      <div class="flex">
+        <dt class="font-bold mr-2">Status:</dt>
+        <dd>{{ cardData.status }}</dd>
+      </div>
+    </dl>
+    <button
+      class="bg-cyan-800 hover:bg-cyan-500 transition-all duration-[250] py-2 px-4 rounded-md text-white"
+    >
+      See more
+    </button>
+  </div>
+</div>

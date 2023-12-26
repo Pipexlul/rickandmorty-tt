@@ -1,0 +1,9 @@
+<button (click)="goToPage(1)">First</button>
+<button (click)="goToPreviousPage()" [disabled]="currentPage === 1">
+  Prev
+</button>
+<span>Page {{ currentPage }} of {{ totalPages }}</span>
+<button (click)="goToNextPage()" [disabled]="currentPage === totalPages">
+  Next
+</button>
+<button (click)="goToPage(totalPages)">Last</button>
