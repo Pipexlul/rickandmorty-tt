@@ -1,0 +1,11 @@
+<div class="grid grid-cols-6 gap-4 px-8 py-4">
+  @for (elem of paginatedCards; track elem.id) {
+    <app-card [cardData]="elem" />
+  }
+</div>
+<app-paginator
+  (pageChanged)="updatePage($event)"
+  [items]="cards"
+  [currentPage]="currentPage"
+  [itemsPerPage]="itemsPerPage"
+/>

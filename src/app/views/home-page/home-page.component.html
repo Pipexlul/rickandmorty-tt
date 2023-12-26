@@ -1,0 +1,6 @@
+<div class="bg-blue-950 pt-4 pb-8">
+  <app-card-list
+    [cards]="characterData$ | async | characterscards"
+    [itemsPerPage]="12"
+  />
+</div>
