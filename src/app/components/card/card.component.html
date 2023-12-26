@@ -6,11 +6,14 @@
   <h2 class="text-xl font-bold mb-2 text-inherit">
     {{ cardData.name | capitalize }}
   </h2>
-  <img
-    src="https://via.placeholder.com/100"
-    alt="Card 1 Image"
-    class="w-full mb-2"
-  />
+  <div class="relative h-56 mb-2">
+    <img
+      [ngSrc]="cardData.image"
+      alt="Character Image"
+      class="object-cover"
+      fill
+    />
+  </div>
   <div class="flex justify-between items-center">
     <dl>
       <div class="flex">

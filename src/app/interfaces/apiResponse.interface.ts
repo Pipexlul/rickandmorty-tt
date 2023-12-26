@@ -21,4 +21,20 @@ interface Character {
   episode: string[];
 }
 
-export { Character, CharacterStatus, CharacterGender, CharacterLocation };
+interface PaginatedResponse<T> {
+  info: {
+    count: number;
+    pages: number;
+    next: string | null;
+    prev: string | null;
+  };
+  results: T[];
+}
+
+export {
+  Character,
+  CharacterStatus,
+  CharacterGender,
+  CharacterLocation,
+  PaginatedResponse,
+};

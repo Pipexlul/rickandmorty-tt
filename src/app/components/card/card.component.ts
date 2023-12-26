@@ -3,6 +3,7 @@ import { Component, Input } from "@angular/core";
 import { CardDTO } from "../../interfaces/card.interface";
 
 import { CapitalizePipe } from "../../pipes/capitalize.pipe";
+import { NgOptimizedImage } from "@angular/common";
 
 const _statusColors: Record<CardDTO["status"], string> = {
   Alive: "bg-slate-200",
@@ -13,7 +14,7 @@ const _statusColors: Record<CardDTO["status"], string> = {
 @Component({
   selector: "app-card",
   standalone: true,
-  imports: [CapitalizePipe],
+  imports: [CapitalizePipe, NgOptimizedImage],
   templateUrl: "./card.component.html",
   styleUrl: "./card.component.css",
 })

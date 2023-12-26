@@ -5,4 +5,4 @@ type CardDTO = Pick<
   "id" | "name" | "image" | "species" | "gender" | "status"
 >;
 
-export type { CardDTO };
+export { CardDTO };
