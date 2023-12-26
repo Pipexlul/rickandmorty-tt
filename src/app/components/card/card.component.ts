@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router";
 
 import { CardDTO } from "../../interfaces/card.interface";
 
@@ -19,6 +20,8 @@ const _statusColors: Record<CardDTO["status"], string> = {
   styleUrl: "./card.component.css",
 })
 export class CardComponent {
+  constructor(private router: Router) {}
+
   @Input({ required: true }) cardData: CardDTO = {
     id: -1,
     name: "",
@@ -34,5 +37,9 @@ export class CardComponent {
 
   get statusColor(): string {
     return _statusColors[this.cardData.status];
+  }
+
+  goToDetails(): void {
+    this.router.navigate(["/details", this.cardData.id]);
   }
 }
