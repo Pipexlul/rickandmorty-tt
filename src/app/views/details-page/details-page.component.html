@@ -1,0 +1,17 @@
+<div *ngIf="characterData$; else error">
+  <div *ngIf="characterData$ | async as charData; else invalid" class="p-4">
+    <app-full-card [characterData]="charData" />
+  </div>
+</div>
+
+<ng-template #error>
+  <div class="flex justify-center items-center p-4">
+    <h2 class="text-2xl">Invalid id parameter</h2>
+  </div>
+</ng-template>
+
+<ng-template #invalid>
+  <div class="flex justify-center items-center p-4">
+    <h2 class="text-2xl">Character not found</h2>
+  </div>
+</ng-template>
